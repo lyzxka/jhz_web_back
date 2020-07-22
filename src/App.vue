@@ -1,27 +1,40 @@
 <template>
   <div id="app">
-    <Login />
+    <Index />
   </div>
 </template>
 
 <script>
-import Login from './page/login'
+
+import Index from './page/index'
 
 export default {
   name: 'App',
-  components: {
-    Login
+  components:{
+    Index
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+  }
+  /*.el-aside {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 70px;
+    bottom: 10px;
+    overflow-y: scroll;
+  }*/
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
 </style>

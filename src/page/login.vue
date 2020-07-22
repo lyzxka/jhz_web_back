@@ -62,10 +62,11 @@
         margin-top: 0.4rem;
         text-align: right;
         vertical-align: center;
-        line-height: 2.5rem;
+        line-height: 2rem;
     }
     .remember-me{
         color: grey;
+        margin-top: .4rem;
     }
     .submit-btn{
         width: 100%;
