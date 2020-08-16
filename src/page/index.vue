@@ -15,7 +15,7 @@
                 <el-menu
                         :unique-opened=true
                         class="el-menu-vertical-demo"
-                        :collapse="menuVisible"
+                        :collapse="!getMenuVisible"
                         default-active="1"
                         :open="handleOpen"
                         :close="handleClose"
@@ -44,6 +44,11 @@
         data(){
             return{
                 menuVisible: this.$store.state.menuVisible,
+            }
+        },
+        computed:{
+            getMenuVisible() {
+                return this.$store.state.menuVisible;
             }
         },
         methods:{

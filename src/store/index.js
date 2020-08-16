@@ -16,7 +16,6 @@ export default new vuex.Store({
                 icon:"el-icon-menu",
                 secondMenuList:[
                     {title:"二级菜单1",url:"/",icon:"el-icon-menu"},
-                    {title:"二级菜单2",url:"/login",icon:"el-icon-menu"}
                 ]
             },
             {

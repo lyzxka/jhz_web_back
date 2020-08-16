@@ -29,6 +29,7 @@
 </template>
 
 <script>
+    import axios from 'axios'
     export default {
         name: "login",
         data(){
@@ -44,7 +45,28 @@
                 this.genCaptchaUrl=this.genCaptchaUrl+Math.random();
             },
             submit:function(){
-                alert("提交表单")
+                axios({
+                    method:'post',
+                    url:'http://192.168.0.102:8081/jhz/auth/login',
+                    data:{
+                        username: this.username,
+                        password: this.password
+                    },
+
+                }).then(function(resp){
+                    console.log(resp.data.code);
+                    axios({
+                        method: "get",
+                        url:"http://192.168.0.102:8081/jhz/testApi",
+                        headers:{
+                            authorization:resp.data.token
+                        }
+                    }).then(function (res) {
+                        console.log(res);
+                    })
+                }).catch(resp => {
+                    console.log('请求失败：'+resp.status+','+resp.statusText);
+                });
             },
         }
     }
